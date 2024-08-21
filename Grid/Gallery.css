@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    background-color:antiquewhite;
+}
+
+ul li {
+    list-style: none;
+}
+
+h2 {
+    text-align: center;
+    padding: 20px;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.gallery {
+    border: 2px solid #000;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    margin: 0 50px;
+    grid-gap: 2px;
+    background-color: azure;
+}

@@ -1,0 +1,137 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+nav {
+    display: flex;
+    justify-content:space-around;
+    box-sizing: border-box;
+    background-color: #508C9B;
+    height: 70px;
+    align-items: center;
+}
+
+nav .logo {
+    /* margin-left: 80px; */
+    /* padding: 10px; */
+    color:antiquewhite;
+    letter-spacing: 2px;
+    font-style: italic;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    /* margin-right: 200px; */
+    justify-content: space-around;
+    width: 40%;
+}
+
+nav ul li a {
+    /* margin: 25px; */
+    text-decoration: none;
+    color: antiquewhite;
+    font-size: 0.9em;
+}
+
+nav ul li a:hover {
+    color: rgb(244, 241, 238);
+    font-size: 0.92em;
+    transition: all 0.3s;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+
+/* Responsive Tablet Style */
+@media (max-width: 768px) {
+    nav ul {
+        width: 50%;
+        justify-content: space-between;
+    }
+    .menu-toggle {
+        display: none;
+    }
+}
+
+/* Responsive Mobile Style */
+@media (max-width: 576px) {
+    nav ul {
+        position: absolute;
+        flex-direction: column;
+        background-color: #508C9B;
+        justify-content: space-evenly;
+        height: 100vh;
+        width: 75%;
+        right: 0;
+        top: 0;
+        z-index: -2;
+        transform: translateX(100%);
+        transition: all 0.8s;
+        opacity: 0.5;
+    }
+
+    nav ul.slide {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        height: 20px;
+        justify-content: space-between;
+        position: relative;
+        right: -40px;
+    }
+
+    .menu-toggle input{
+        position: absolute;
+        width: 40px ;
+        height: 28px;
+        left: -10px;
+        top: -3px;
+        opacity: 0;
+        cursor: pointer;
+        z-index: 2;
+    }
+
+    .menu-toggle span {
+        display: block;
+        width: 28px;
+        height: 3px;
+        background-color: antiquewhite;
+        border-radius: 3px;
+        transition: all 0.5s;
+    }
+
+    /*hamburger menu animations */
+    .menu-toggle span:nth-child(2) {
+        transform-origin: 0 0;
+    }
+
+    .menu-toggle input:checked ~ span:nth-child(2) {
+        transform: rotate(45deg) translate(-1px, -1px);
+    }
+
+    .menu-toggle input:checked ~ span:nth-child(3) {
+        transform: scale(0);
+    }
+
+    .menu-toggle span:last-child {
+        transform-origin: 0 100%;
+    }
+
+    .menu-toggle input:checked ~ span:last-child {
+        transform: rotate(-45deg) translate(-1px, 0.5px);
+    }
+
+}

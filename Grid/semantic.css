@@ -1,0 +1,81 @@
+html, body {
+    padding: 0;
+    margin: 0;
+    color: white;
+}
+
+.container {
+    border: 2px solid #000;
+    width: 600px;
+    height: 650px;
+    margin: 50px auto;
+    display: grid;
+    grid-template-areas: "header header"
+    "aside main"
+    "nav main"
+    "footer footer";
+    grid-template-columns: 1fr 1.5fr;
+    grid-template-rows: 1fr 1fr 1.3fr 0.3fr ;
+}
+
+header {
+    grid-area: header;
+    background-color: rgb(212, 14, 212);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    grid-area: main;
+    background-color: rgb(145, 72, 72);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+aside {
+    grid-area: aside;
+    background-color: rgb(72, 72, 238);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav {
+    grid-area: nav;
+    background-color: rgb(245, 70, 70);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+    grid-area: footer;
+    background-color: rgb(81, 81, 81);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container2 {
+    width: 80%;
+    border: 1px solid black;
+    margin: 50px auto;
+    color: #000;
+    display: grid;
+    grid-template-columns: 40% auto 100px;
+    grid-template-rows: 50px 100px auto;
+}
+
+.item {
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(112, 191, 194);
+}
+
+.item:nth-child(even) {
+    background-color: rgb(245, 58, 173);
+}
